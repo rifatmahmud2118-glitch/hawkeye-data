@@ -1,0 +1,22 @@
+name: Update data
+on:
+  schedule:
+    - cron: "0 2 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install requests numpy androguard pyzipper
+      - run: python build_data.py
+        env:
+          ABUSE_KEY: ${{ secrets.ABUSE_KEY }}
+          FULL_URL: ${{ secrets.FULL_URL }}
+      - run: | git config user.name "hawkeye-bot" git config user.email "bot@users.noreply.github.com" git add apk_hashes.txt bad_urls.txt model.json stats.json git commit -m "Update data" || echo "nothing changed" git push
