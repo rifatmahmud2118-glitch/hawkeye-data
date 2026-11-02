@@ -1,4 +1,7 @@
 {
   "version": 1,
-  "rules": []
+  "updated_at": "2026-11-02",
+  "min_app_version": "1.0.0",
+  "rules": {},
+  "signatures": []
 }
