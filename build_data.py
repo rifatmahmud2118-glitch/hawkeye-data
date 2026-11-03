@@ -140,7 +140,11 @@ def get_malware(hashes, folder, deadline):
 
 def get_benign(folder, n, deadline):
     os.makedirs(folder, exist_ok=True)
-    idx = requests.get("https://f-droid.org/repo/index-v1.json", timeout=300).json()
+    try:
+        idx = requests.get("https://f-droid.org/repo/index-v1.json", timeout=300).json()
+    except Exception as e:
+        log("f-droid index failed:", type(e).__name__)
+        return 0
     names = [v[0]["apkName"] for v in idx.get("packages", {}).values() if v and v[0].get("apkName")]
     random.shuffle(names)
     got = tried = 0
@@ -168,6 +172,17 @@ def build_lists():
 
 
 def build_model():
+    try:
+        _build_model()
+    finally:
+        # samples must never stay on disk, even after an error (they must never be committed)
+        shutil.rmtree("apks", ignore_errors=True)
+        for junk in ("features.csv", "model_new.json"):
+            if os.path.exists(junk):
+                os.remove(junk)
+
+
+def _build_model():
     start = time.time()
     pool = recent_hashes() or load_lines("apk_hashes.txt")[-1000:]
     shutil.rmtree("apks", ignore_errors=True)
