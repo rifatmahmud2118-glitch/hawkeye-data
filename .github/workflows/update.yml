@@ -11,7 +11,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -19,6 +19,7 @@ jobs:
           python-version: "3.11"
       - run: pip install requests numpy androguard pyzipper
       - name: Build lists
+        timeout-minutes: 15
         run: python build_data.py lists
         env:
           ABUSE_KEY: ${{ secrets.ABUSE_KEY }}
@@ -33,6 +34,7 @@ jobs:
           git push
       - name: Train model
         continue-on-error: true
+        timeout-minutes: 30
         run: python build_data.py model
         env:
           ABUSE_KEY: ${{ secrets.ABUSE_KEY }}
