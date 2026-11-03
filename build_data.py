@@ -38,7 +38,7 @@ def stats_update(**kw):
 
 
 def mb_api(data):
-    return requests.post("https://mb-api.abuse.ch/api/v1/", data=data, headers=H, timeout=90)
+    return requests.post("https://mb-api.abuse.ch/api/v1/", data=data, headers=H, timeout=30)
 
 
 def recent_hashes():
@@ -63,9 +63,10 @@ def apk_hashes():
     url = os.environ.get("FULL_URL", "").strip()
     if url:
         try:
-            with requests.get(url, stream=True, timeout=900) as r:
+            import tempfile
+            buf = tempfile.TemporaryFile()
+            with requests.get(url, stream=True, timeout=(30, 120)) as r:
                 r.raise_for_status()
-                buf = io.BytesIO()
                 for chunk in r.iter_content(1 << 20):
                     buf.write(chunk)
             buf.seek(0)
@@ -115,13 +116,18 @@ def get_malware(hashes, folder, deadline):
     hashes = list(hashes)
     random.shuffle(hashes)
     got = tried = 0
+    why = {}
     for h in hashes:
-        if got >= MAX_SAMPLES or tried >= 400 or time.time() > deadline:
+        if got >= MAX_SAMPLES or tried >= 250 or time.time() > deadline:
             break
         tried += 1
         try:
             r = mb_api({"query": "get_file", "sha256_hash": h})
             if r.status_code != 200 or r.content[:2] != b"PK":
+                k = "http%d" % r.status_code if r.status_code != 200 else "notzip:" + r.content[:60].decode("utf-8", "ignore").replace("\n", " ")
+                why[k] = why.get(k, 0) + 1
+                if tried <= 3:
+                    log("get_file reply:", k)
                 continue
             with pyzipper.AESZipFile(io.BytesIO(r.content)) as z:
                 z.setpassword(b"infected")
@@ -131,10 +137,11 @@ def get_malware(hashes, folder, deadline):
             with open(os.path.join(folder, h + ".apk"), "wb") as f:
                 f.write(data)
             got += 1
-        except Exception:
-            pass
+        except Exception as e:
+            k = "error:" + type(e).__name__
+            why[k] = why.get(k, 0) + 1
         time.sleep(0.3)
-    log("malware tried:", tried, "got:", got)
+    log("malware tried:", tried, "got:", got, "reasons:", why)
     return got
 
 
@@ -149,11 +156,11 @@ def get_benign(folder, n, deadline):
     random.shuffle(names)
     got = tried = 0
     for name in names:
-        if got >= n or tried >= 400 or time.time() > deadline:
+        if got >= n or tried >= 250 or time.time() > deadline:
             break
         tried += 1
         try:
-            r = requests.get("https://f-droid.org/repo/" + name, timeout=90)
+            r = requests.get("https://f-droid.org/repo/" + name, timeout=30)
             if r.status_code == 200 and len(r.content) < 60 * 1024 * 1024:
                 with open(os.path.join(folder, name), "wb") as f:
                     f.write(r.content)
@@ -182,12 +189,32 @@ def build_model():
                 os.remove(junk)
 
 
+DEFAULT_WEIGHTS = {"read_sms": 1.5, "recv_sms": 1.0, "send_sms": 1.2, "install_pkgs": 1.0, "acc_perm": 1.5,
+                   "overlay_perm": 1.0, "admin_perm": 1.0, "listener_perm": 0.8, "all_files": 0.6, "mic": 0.3,
+                   "camera": 0.2, "contacts": 0.2, "call_log": 0.4, "location": 0.2, "debuggable": 0.5,
+                   "old_sdk": 0.5, "hidden": 1.0}
+
+
+def ensure_valid_model():
+    """If training did not work, make sure model.json is still a valid file (the app's built-in weights),
+    so the app never sees an empty or broken model."""
+    try:
+        with open("model.json", encoding="utf-8") as f:
+            if json.load(f).get("weights"):
+                return
+    except Exception:
+        pass
+    with open("model.json", "w", encoding="utf-8") as f:
+        json.dump({"bias": -3.0, "weights": DEFAULT_WEIGHTS, "source": "default (training had too few samples)"}, f, indent=1)
+    log("model.json was missing or empty: wrote default weights")
+
+
 def _build_model():
     start = time.time()
     pool = recent_hashes() or load_lines("apk_hashes.txt")[-1000:]
     shutil.rmtree("apks", ignore_errors=True)
-    m = get_malware(pool, "apks/malware", start + 30 * 60)
-    b = get_benign("apks/benign", max(m, 50), start + 40 * 60)
+    m = get_malware(pool, "apks/malware", start + 10 * 60)
+    b = get_benign("apks/benign", max(m, 50), start + 18 * 60)
     log("samples malware/benign:", m, b)
     trained = False
     if m >= 30 and b >= 30:
@@ -201,6 +228,8 @@ def _build_model():
             trained = True
         except Exception as e:
             log("training failed:", type(e).__name__)
+    if not trained:
+        ensure_valid_model()
     shutil.rmtree("apks", ignore_errors=True)
     for junk in ("features.csv", "model_new.json"):
         if os.path.exists(junk):
