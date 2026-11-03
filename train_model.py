@@ -76,4 +76,35 @@ def train(csv_path, out):
     X = np.array([[float(r[k]) for k in FEATURES] for r in rows])
     y = np.array([float(r["label"]) for r in rows])
     n = len(y)
-    if n < 200 or y.sum() < 50 or (n - y.sum())
+    if n < 200 or y.sum() < 50 or (n - y.sum()) < 50:
+        print("WARNING: very little data (%d rows). The model will be unreliable." % n)
+    rng = np.random.default_rng(1)
+    idx = rng.permutation(n)
+    cut = int(n * 0.8)
+    tr, te = idx[:cut], idx[cut:]
+    w = np.zeros(X.shape[1]); b = 0.0
+    pos_w = (n - y.sum()) / max(y.sum(), 1)  # balance classes
+    for _ in range(4000):
+        z = X[tr] @ w + b
+        p = 1 / (1 + np.exp(-z))
+        sw = np.where(y[tr] == 1, pos_w, 1.0)
+        g = (p - y[tr]) * sw
+        w -= 0.05 * (X[tr].T @ g / len(tr) + 0.001 * w)
+        b -= 0.05 * g.mean()
+    p = 1 / (1 + np.exp(-(X[te] @ w + b)))
+    pred = p >= 0.5
+    tp = int(((pred == 1) & (y[te] == 1)).sum()); fp = int(((pred == 1) & (y[te] == 0)).sum())
+    fn = int(((pred == 0) & (y[te] == 1)).sum()); tn = int(((pred == 0) & (y[te] == 0)).sum())
+    print("test rows %d | caught malware %d, missed %d | false alarms %d, correct benign %d" % (len(te), tp, fn, fp, tn))
+    print("precision %.2f recall %.2f" % (tp / max(tp + fp, 1), tp / max(tp + fn, 1)))
+    json.dump({"bias": float(b), "weights": {k: float(v) for k, v in zip(FEATURES, w)}}, open(out, "w"), indent=1)
+    print("wrote", out)
+
+
+if __name__ == "__main__":
+    if len(sys.argv) == 4 and sys.argv[1] == "extract":
+        extract(sys.argv[2], sys.argv[3])
+    elif len(sys.argv) == 4 and sys.argv[1] == "train":
+        train(sys.argv[2], sys.argv[3])
+    else:
+        print(__doc__)
