@@ -83,6 +83,13 @@ def apk_hashes():
     allh = sorted(old | new)
     with open("apk_hashes.txt", "w") as f:
         f.write("\n".join(allh) + "\n")
+    # অ্যাপ এটা RAM-এ না রেখে সরাসরি বাইনারি সার্চ করে, তাই কমপ্যাক্ট বাইনারি ফর্মও রাখা হয় (৩২ বাইট/হ্যাশ)
+    with open("apk_hashes.bin", "wb") as f:
+        for h in allh:
+            try:
+                f.write(bytes.fromhex(h))
+            except ValueError:
+                pass
     log("apk hashes total:", len(allh), "new:", len(new - old))
     return len(allh)
 
