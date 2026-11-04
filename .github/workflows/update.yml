@@ -25,11 +25,22 @@ jobs:
           ABUSE_KEY: ${{ secrets.ABUSE_KEY }}
           FULL_URL: ${{ secrets.FULL_URL }}
       - name: Save lists
-        run: | git config user.name "hawkeye-bot" git config user.email "bot@users.noreply.github.com" git add apk_hashes.txt bad_urls.txt model.json stats.json 2>/dev/null || true git commit -m "Update lists" || echo "nothing changed" git pull --rebase origin main git push       - name: Train model
+        run: |
+          git config user.name "hawkeye-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add apk_hashes.txt bad_urls.txt model.json stats.json 2>/dev/null || true
+          git commit -m "Update lists" || echo "nothing changed"
+          git pull --rebase origin main
+          git push
+      - name: Train model
         continue-on-error: true
         timeout-minutes: 30
         run: python build_data.py model
         env:
           ABUSE_KEY: ${{ secrets.ABUSE_KEY }}
       - name: Save model
-        run: | git add apk_hashes.txt bad_urls.txt model.json stats.json 2>/dev/null || true git commit -m "Update model" || echo "nothing changed" git pull --rebase origin main git push
+        run: |
+          git add apk_hashes.txt bad_urls.txt model.json stats.json 2>/dev/null || true
+          git commit -m "Update model" || echo "nothing changed"
+          git pull --rebase origin main
+          git push
