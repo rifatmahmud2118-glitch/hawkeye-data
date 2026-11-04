@@ -172,10 +172,115 @@ def get_benign(folder, n, deadline):
     return got
 
 
+def _hex(v, n):
+    v = str(v).strip().lower().replace(":", "")
+    return v if len(v) == n and all(c in "0123456789abcdef" for c in v) else ""
+
+
+def _dom(v):
+    v = re.sub(r"^[a-z]+://", "", str(v).strip().lower()).split("/")[0].split(":")[0].strip(".")
+    return v if "." in v and " " not in v and len(v) < 120 else ""
+
+
+def parse_stalkerware(text):
+    """ioc.yaml of AssoEchap/stalkerware-indicators -> IOC lines (pkg:, domain:, cert: for 64-hex, sha256:)."""
+    import yaml
+    out = set()
+    for e in (yaml.safe_load(text) or []):
+        if not isinstance(e, dict):
+            continue
+        for p in e.get("packages") or []:
+            p = str(p).strip().lower()
+            if re.fullmatch(r"[a-z0-9_]+(\.[a-z0-9_]+)+", p):
+                out.add("pkg:" + p)
+        for c in e.get("certificates") or []:
+            h = _hex(c, 64)
+            if h:
+                out.add("cert:" + h)
+        for w in e.get("websites") or []:
+            d = _dom(w)
+            if d:
+                out.add("domain:" + d)
+        c2 = e.get("c2") or {}
+        for d in (c2.get("domains") or []) + (c2.get("ips") or []):
+            d = _dom(d)
+            if d:
+                out.add("domain:" + d)
+        for h in e.get("distribution") or []:
+            d = _dom(h)
+            if d:
+                out.add("domain:" + d)
+    return out
+
+
+def threatfox_domains():
+    """Recent ThreatFox domain/IP IOCs (needs the abuse.ch Auth-Key). Capped so the phone list stays small."""
+    out = set()
+    try:
+        r = requests.post("https://threatfox-api.abuse.ch/api/v1/", json={"query": "get_iocs", "days": 7},
+                          headers=H, timeout=60)
+        j = r.json()
+        for d in j.get("data") or []:
+            t = str(d.get("ioc_type", ""))
+            v = str(d.get("ioc", ""))
+            if t == "domain":
+                x = _dom(v)
+            elif t == "ip:port":
+                x = v.split(":")[0]
+            else:
+                continue
+            if x:
+                out.add("domain:" + x)
+    except Exception as e:
+        log("threatfox failed:", type(e).__name__)
+    return out
+
+
+def build_ioc():
+    """ioc.txt = stalkerware + ThreatFox lines the app loads through IocDb.
+    Rebuilt from scratch each week (keeps the list small); if a source fails, last week's lines are kept."""
+    old = set(l for l in load_lines("ioc.txt") if not l.startswith("#"))
+    new = set()
+    ok = True
+    try:
+        r = requests.get("https://raw.githubusercontent.com/AssoEchap/stalkerware-indicators/master/ioc.yaml", timeout=60)
+        if r.status_code == 200:
+            got = parse_stalkerware(r.text)
+            log("stalkerware lines:", len(got))
+            new |= got
+            ok = ok and len(got) > 0
+        else:
+            log("stalkerware http", r.status_code)
+            ok = False
+    except Exception as e:
+        log("stalkerware failed:", type(e).__name__)
+        ok = False
+    tf = threatfox_domains()
+    log("threatfox lines:", len(tf))
+    new |= tf
+    ok = ok and len(tf) > 0
+    merged = sorted(new if ok else (new | old))[:40000]
+    if not merged:
+        return 0
+    with open("ioc.txt", "w", encoding="utf-8") as f:
+        f.write("\n".join(merged) + "\n")
+    try:
+        subprocess.call(["git", "add", "ioc.txt"])
+    except Exception:
+        pass
+    log("ioc total:", len(merged))
+    return len(merged)
+
+
 def build_lists():
     total = apk_hashes()
     urls = bad_urls()
-    stats_update(apk_hashes=total, bad_urls=urls)
+    try:
+        iocs = build_ioc()
+    except Exception as e:
+        log("ioc failed:", type(e).__name__)
+        iocs = 0
+    stats_update(apk_hashes=total, bad_urls=urls, ioc_lines=iocs)
 
 
 def build_model():
