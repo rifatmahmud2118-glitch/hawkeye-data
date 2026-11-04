@@ -293,6 +293,7 @@ domain:111.248.219.126
 domain:111.88.126.188
 domain:111.90.150.193
 domain:11111.pl
+domain:112.213.110.225
 domain:113.250.181.255
 domain:115.175.24.19
 domain:115.190.208.155
@@ -312,12 +313,12 @@ domain:119.42.148.190
 domain:119.8.35.235
 domain:11eventz.com
 domain:120.26.112.247
-domain:120.26.161.0
 domain:120.48.103.49
 domain:121.43.102.230
 domain:121.43.158.195
 domain:121.78.158.102
 domain:122.114.177.145
+domain:122.144.162.171
 domain:122.51.179.8
 domain:123-nonexistant-dnsjedi-456.financial-reality.sk
 domain:123blueslot.co
@@ -372,6 +373,7 @@ domain:129.227.67.234
 domain:12d60.appspot.com
 domain:12d60.firebaseio.com
 domain:12deoctubreveterinaria.com.ar
+domain:12dim-xanth.xan.sch.gr
 domain:13-5.org
 domain:13-5.ru
 domain:13.124.107.166
@@ -399,7 +401,6 @@ domain:131.226.2.185
 domain:131.226.2.225
 domain:134.122.114.138
 domain:134.122.153.121
-domain:134.122.189.138
 domain:134.209.156.186
 domain:134.209.82.225
 domain:135.125.92.30
@@ -433,6 +434,7 @@ domain:139.196.74.76
 domain:139.59.125.208
 domain:139.64.172.10
 domain:14.103.11.64
+domain:14.167.237.176
 domain:140.143.165.115
 domain:140.228.29.160
 domain:140.82.2.218
@@ -444,10 +446,12 @@ domain:141.98.10.160
 domain:141.98.10.168
 domain:141.98.10.172
 domain:141.98.10.213
+domain:141.98.10.86
 domain:142.4.38.191
 domain:143.109.37.187
 domain:143.110.219.27
 domain:143.198.113.241
+domain:143.237.49.46
 domain:143.244.144.70
 domain:143.246.62.76
 domain:144.126.207.90
@@ -469,11 +473,13 @@ domain:144.31.57.121
 domain:144.31.59.27
 domain:144.76.109.28
 domain:144.76.83.59
+domain:145.209.123.30
 domain:146.103.98.127
 domain:146.103.98.49
 domain:146.190.103.76
 domain:146.190.106.155
 domain:146.190.252.67
+domain:146.39.247.29
 domain:146.70.169.146
 domain:147.182.188.228
 domain:147.182.233.50
@@ -880,7 +886,10 @@ domain:159.69.11.133
 domain:159.69.114.60
 domain:159.69.116.56
 domain:159.69.126.28
+domain:159.75.91.47
 domain:159.89.175.148
+domain:15f54so2.bossbeyroyal.click
+domain:16.119.197.223
 domain:16.135.199.104.bc.googleusercontent.com
 domain:16.16.220.236
 domain:16.28.88.106
@@ -954,6 +963,7 @@ domain:165.154.254.58
 domain:165.22.61.69
 domain:165.227.210.117
 domain:165.245.195.68
+domain:165.245.199.76
 domain:166.88.100.135
 domain:167.114.114.207
 domain:167.148.195.14
@@ -965,14 +975,17 @@ domain:167.88.172.174
 domain:167.88.175.160
 domain:167.88.175.252
 domain:168-group.com
+domain:168.144.176.164
 domain:168.144.241.131
 domain:168.144.40.127
 domain:168.62.167.25
 domain:169.174.116.136.bc.googleusercontent.com
 domain:16tv.hu
+domain:17.100.166.196
 domain:170.187.145.38
 domain:170.187.154.248
 domain:170.205.52.146
+domain:170.64.153.147
 domain:171.244.47.232
 domain:172.104.203.148
 domain:172.111.139.175
@@ -998,6 +1011,7 @@ domain:172.86.80.155
 domain:172.86.89.192
 domain:172.93.110.81
 domain:172.94.122.130
+domain:173.132.27.159
 domain:173.208.168.28
 domain:173ye7va.bossbeyprimezone.click
 domain:175.126.146.147
@@ -1005,18 +1019,17 @@ domain:175.17.140.168
 domain:175.17.141.79
 domain:175.27.232.18
 domain:175.43.223.200
-domain:175.53.189.35.bc.googleusercontent.com
 domain:176.10.118.197
 domain:176.120.22.24
 domain:176.123.7.7
 domain:176.20.244.160
 domain:176.44.71.239
 domain:176.53.159.40
-domain:176.65.139.131
 domain:176.65.139.50
 domain:176.65.144.135
 domain:176.65.149.174
 domain:176.9.42.16
+domain:177.4.207.49
 domain:177.5.76.21
 domain:178.156.146.114
 domain:178.156.158.130
@@ -1051,6 +1064,7 @@ domain:180.93.193.100
 domain:180.94.20.228
 domain:181.174.164.31
 domain:181.206.158.19
+domain:181.228.99.165
 domain:181.71.224.176
 domain:182.16.98.82
 domain:182.16.98.83
@@ -1097,6 +1111,7 @@ domain:186.105.22.190
 domain:186.216.55.16
 domain:186.240.200.67
 domain:186.244.247.120
+domain:187.201.142.208
 domain:187.201.80.208
 domain:187.7.203.5
 domain:187.73.187.46
@@ -1105,6 +1120,7 @@ domain:188.137.243.190
 domain:188.137.248.249
 domain:188.15.129.41
 domain:188.166.152.179
+domain:188.166.233.203
 domain:188.240.231.74
 domain:188.245.153.190
 domain:188.245.221.146
@@ -1287,13 +1303,14 @@ domain:20.26.212.185
 domain:20.49.177.45
 domain:20.93.198.104.bc.googleusercontent.com
 domain:200.28.136.8
+domain:200.9.150.113
 domain:200bonuscasino.org
 domain:201.189.44.163
 domain:201.33.21.62
 domain:202.162.108.208
 domain:202.61.140.195
-domain:202.61.160.181
 domain:202.61.160.233
+domain:202.95.13.142
 domain:203.118.131.29
 domain:203.202.232.86
 domain:203.91.72.250
@@ -1361,9 +1378,10 @@ domain:212.74.20.98
 domain:212.74.20.99
 domain:212.77.75.25
 domain:213.111.150.93
-domain:213.139.77.217
+domain:213.139.195.68
 domain:213.176.72.224
 domain:213.239.228.196
+domain:215.23.63.65
 domain:216.118.251.174
 domain:216.126.225.243
 domain:216.227.218.84
@@ -1383,6 +1401,7 @@ domain:217.60.102.231
 domain:217.60.102.38
 domain:217.60.102.45
 domain:217.60.102.58
+domain:217.60.102.78
 domain:217.60.102.82
 domain:217.60.103.120
 domain:217.60.195.105
@@ -1406,7 +1425,9 @@ domain:217.79.118.50
 domain:217.91.94.18
 domain:218.237.58.53
 domain:218.32.248.20
+domain:219.3.211.79
 domain:21october.com
+domain:22.101.115.44
 domain:220.134.228.22
 domain:221.15.186.102
 domain:222.137.140.170
@@ -1449,12 +1470,14 @@ domain:23.251.57.5
 domain:23.251.57.79
 domain:23.251.57.86
 domain:23.254.226.103
+domain:23.39.171.212
 domain:23.92.20.189
 domain:23.94.145.143
 domain:23.94.232.185
 domain:23.94.252.54
 domain:23.95.217.154
 domain:23.95.242.55
+domain:234.78.101.94
 domain:240.172.108.136.bc.googleusercontent.com
 domain:241.74.191.92.dynamic.jazztel.es
 domain:247mobiletyre.com
@@ -1471,7 +1494,6 @@ domain:2rzkuxmn.verticalrewards.com
 domain:2sa10whu.bossbeymaster.click
 domain:2taxi.ir
 domain:3.109.191.80
-domain:3.11.71.133
 domain:3.110.43.36
 domain:3.124.14.232
 domain:3.249.143.17
@@ -1538,6 +1560,7 @@ domain:37.27.22.195
 domain:37.27.26.190
 domain:37.72.140.16
 domain:37.77.150.95
+domain:37.88.87.68
 domain:37e.lat
 domain:37e.pics
 domain:38.127.244.12
@@ -1568,6 +1591,7 @@ domain:39.106.80.126
 domain:39.107.238.247
 domain:39.107.50.187
 domain:39.109.100.199
+domain:39.67.14.119
 domain:3bn9xbsj.bodes.store
 domain:3dhubsa.com
 domain:3dw.com.br
@@ -1587,6 +1611,7 @@ domain:41.251.206.94
 domain:42.193.138.26
 domain:42.194.146.97
 domain:42.228.214.216
+domain:42.64.51.145
 domain:43.102.132.75
 domain:43.102.132.76
 domain:43.102.132.77
@@ -1662,7 +1687,6 @@ domain:43.213.43.201
 domain:43.243.73.187
 domain:43.248.9.240
 domain:43.251.102.131
-domain:43.251.103.206
 domain:43.255.159.91
 domain:43.255.159.93
 domain:44.210.140.205
@@ -1676,7 +1700,6 @@ domain:45.136.154.97
 domain:45.136.154.98
 domain:45.136.154.99
 domain:45.136.5.187
-domain:45.141.117.158
 domain:45.141.21.216
 domain:45.144.172.49
 domain:45.144.212.109
@@ -1756,6 +1779,7 @@ domain:47.110.147.134
 domain:47.110.227.98
 domain:47.110.44.81
 domain:47.209.174.34.bc.googleusercontent.com
+domain:47.239.109.26
 domain:47.249.156.34.bc.googleusercontent.com
 domain:47.252.23.40
 domain:47.252.72.197
@@ -1805,7 +1829,6 @@ domain:49crrg0d.bossbeynova.click
 domain:49vcy2na.verticalrewards.com
 domain:4cprocessing.com
 domain:4d8q367q81.workers.dev
-domain:4gzdhrn8.epexecutivecoaching.com
 domain:4jslg.11111.pl
 domain:4jw9mmho.bossbeyvip4.xyz
 domain:4z51u17u.bossbeyprimeclub.click
@@ -1861,6 +1884,7 @@ domain:54.248.136.140
 domain:54.66.70.240
 domain:57ejf.com
 domain:59.110.172.210
+domain:59.115.25.181
 domain:59.115.30.180
 domain:59.115.46.39
 domain:590realtors.com
@@ -1883,7 +1907,6 @@ domain:63.187.111.92
 domain:64.118.128.131
 domain:64.118.134.192
 domain:64.118.154.123
-domain:64.188.67.232
 domain:64.205.179.0
 domain:64.205.179.112
 domain:64.205.179.116
@@ -1901,6 +1924,7 @@ domain:64.224.17.29
 domain:64.226.67.42
 domain:64.227.0.146
 domain:64.227.133.14
+domain:64.81.30.24
 domain:64.89.160.235
 domain:64.89.160.29
 domain:64.89.163.212
@@ -1942,6 +1966,7 @@ domain:69.64.81.166
 domain:69.64.81.49
 domain:69.64.81.98
 domain:69.64.91.29
+domain:6f35xsvz7x.workers.dev
 domain:6kvses.com
 domain:6os989ve.avako.store
 domain:6rpbrwoxih.workers.dev
@@ -1950,6 +1975,7 @@ domain:70.92.93.55
 domain:71.251.192.71
 domain:71.62.13.34.bc.googleusercontent.com
 domain:71vu88ey.bossbeyagency.click
+domain:73.235.232.153
 domain:74.0.42.235
 domain:74.120.121.198
 domain:74.207.198.39
@@ -1961,6 +1987,7 @@ domain:77.42.30.151
 domain:770marketing.com
 domain:777gmslots.com
 domain:777xx.xyz
+domain:78.106.143.42
 domain:78.129.237.27
 domain:78.153.136.20
 domain:78.159.131.254
@@ -2224,7 +2251,6 @@ domain:9bumokde.yellohotelsharmoni.com
 domain:9e9tjipz.bossbeyavrupa.store
 domain:9hh8nsbn.bittu.store
 domain:9hxsbfxxy5.workers.dev
-domain:9qhklald.enfejar.casino
 domain:9tsv6sqb.bossbeyhub.click
 domain:9win.world
 domain:a-di.co
@@ -2324,6 +2350,7 @@ domain:affiliate.spyera.com
 domain:affordablefamilyhealthplans.com
 domain:affordalift.com.au
 domain:afinco.net
+domain:afktogel.org
 domain:aflamy.top
 domain:africagrowsgreenawards.com
 domain:africanamericanliteracy.com
@@ -2378,6 +2405,7 @@ domain:aksara87.org
 domain:aksoft.gq
 domain:aktiva.rs
 domain:akumaqqq.xyz
+domain:akun258.org
 domain:akydo.vn
 domain:al-aqobah.org
 domain:al-monti.ir
@@ -2403,6 +2431,7 @@ domain:alfawararural.com
 domain:algest.it
 domain:alhagamiti.com
 domain:ali.panspy.com
+domain:alien203.org
 domain:aligarhgulberg.edu.pk
 domain:alisharousselle.com
 domain:alizargham.com
@@ -3039,6 +3068,7 @@ domain:boombarriers.co.za
 domain:boraskola.edu.rs
 domain:bornofficial.store
 domain:bosaproloco.it
+domain:bosmj.org
 domain:bossbey1.click
 domain:bossbey19.click
 domain:bossbey20.click
@@ -3067,6 +3097,7 @@ domain:bossbeyprimeteam.click
 domain:bossbeyprimeworld.click
 domain:bossbeyprimezone.click
 domain:bossbeypro.click
+domain:bossbeyroyal.click
 domain:bosspy.com
 domain:bostaxservice.com
 domain:bounce2youpartyrentals.com
@@ -3397,6 +3428,7 @@ domain:cm.afktogel.org
 domain:cms.techumayur.in
 domain:cmstq.com
 domain:cnapi.trackview.net
+domain:cnc.murrezbots.vip
 domain:cnggroup.in
 domain:cnit.com.br
 domain:cnrit.co.th
@@ -3501,6 +3533,7 @@ domain:covadonga.cat
 domain:covenant.co.id
 domain:covid19-wb.be
 domain:coworkingtroina.it
+domain:coy9.com
 domain:cozinhacasasabor.com.br
 domain:cozinhadamarinoca.com.br
 domain:cp.appmia.com
@@ -3775,6 +3808,7 @@ domain:download.mobile-tracker-free.me
 domain:download.webwatcherdata.com
 domain:downloads.refog.com
 domain:downloads.shadow-spy.com
+domain:dpjju.in
 domain:dpkpersonal.de
 domain:dr-avdicausevic.de
 domain:dr-cornelia-heinichen.de
@@ -4294,6 +4328,7 @@ domain:fuvudoke.workers.dev
 domain:fuwihi.workers.dev
 domain:fuzescukraszdaegressy.hu
 domain:fx-prox.com
+domain:fz.afktogel.org
 domain:g-hgfdsgd.mom
 domain:g-sdfgdsf.mom
 domain:g-sdfhvrg.rest
@@ -4895,6 +4930,7 @@ domain:ispytic.com
 domain:istanbulminidose.com
 domain:it.mobilespy.at
 domain:it.refog.com
+domain:it0sxerr.hasir.store
 domain:itaciprotec.com
 domain:italpitture.com
 domain:italydistribution.it
@@ -4923,7 +4959,6 @@ domain:izapk.xyz
 domain:izkid.com
 domain:izspy-1313.firebaseio.com
 domain:j.bok13.org
-domain:j0.bala7.org
 domain:j0uxrx2g.paars.poker
 domain:j1uz3zee.bonolo.store
 domain:j3y2klex.bossbey11.click
@@ -5015,9 +5050,9 @@ domain:jywyqana.workers.dev
 domain:k.bala7.org
 domain:k.bo787.com
 domain:k.bob78.org
-domain:k0v5zt7p.verticalrewards.com
 domain:k1.bb69.org
 domain:k4.akurat80.org
+domain:k9.alien203.org
 domain:k94em4jx.bossbeycity.click
 domain:kab-bizconsultyemen.com
 domain:kalajac.ba
@@ -5031,6 +5066,7 @@ domain:kammerjaeger-klein.de
 domain:kampstor.com
 domain:kancelaria-lach.pl
 domain:kancelaria-miastkowski.pl
+domain:kancelarianovus.pl
 domain:kanzlei-steyer.de
 domain:kappa-systems.com
 domain:kaprychozas.rf.gd
@@ -5205,6 +5241,7 @@ domain:lakekickapoo.com
 domain:lakepartyboat.com
 domain:lakshyatak.in
 domain:lalavanderiahtx.com
+domain:lamborshop.com
 domain:lamezzaluna.net
 domain:lamifu-f4a.workers.dev
 domain:lamisandhanna.net
@@ -5220,7 +5257,6 @@ domain:lapinhaexpedicoes.com.br
 domain:lapipelettecreative.com
 domain:lapompe-achaleur.fr
 domain:laptoponrent.co.in
-domain:larpestan.duckdns.org
 domain:larutigy.workers.dev
 domain:lasavoureuse.ca
 domain:lasensa.it
@@ -5321,6 +5357,7 @@ domain:ll.aksara87.org
 domain:lm-plot-design.de
 domain:lmj-traduction.fr
 domain:lmprojetos.com.br
+domain:ln.akun258.org
 domain:lnx.gianfelici.it
 domain:lnx.studiovignali.it
 domain:localpartners-immobilier.com
@@ -5367,7 +5404,6 @@ domain:lucadellalama.it
 domain:lucaplant.com
 domain:lucassantosoficial.com
 domain:luckypatcher.cam
-domain:lufiximy.workers.dev
 domain:lulalili.workers.dev
 domain:lulemo.workers.dev
 domain:lumeopetro.com
@@ -5415,6 +5451,7 @@ domain:mahadeva12jyotirlingatemplemurtievents.com
 domain:mahayanti.com
 domain:mahmoudnorouzi.com
 domain:mail.holzbrenzii.com
+domain:mail.newzdex.com
 domain:mail.praventra.com
 domain:mail02.financial-reality.sk
 domain:mainpokers.com
@@ -5795,6 +5832,7 @@ domain:muhittinaktas.com
 domain:muhkem.com.tr
 domain:multisprint.mk
 domain:murooj.ba
+domain:murrezbots.vip
 domain:museoteti.it
 domain:music.jessica-kappeler.ch
 domain:musicstudio.cz
@@ -5987,6 +6025,7 @@ domain:nondisughero.it
 domain:nongzecboljwv3yfndkggsybsglfrkffw7bvk2zemuteoxe6etpusnad.onion
 domain:nonnafilomena.it
 domain:nonsolocioccolato.it
+domain:nopesa.workers.dev
 domain:northerncalselfies.com
 domain:northernraysrv.com
 domain:northgatess.cyou
@@ -6045,6 +6084,7 @@ domain:officinameccanicacitrosabrina.it
 domain:offset2.net
 domain:offset22.duckdns.org
 domain:ogliastraeventi.info
+domain:ogtko71935.workers.dev
 domain:ogymoggy.firebaseio.com
 domain:ogymogy.com
 domain:ohanamaldives.com
@@ -6185,7 +6225,6 @@ domain:paringenieria.es
 domain:parlamentopai.com
 domain:parmella.it
 domain:parosrentcars.com
-domain:parotide.eu
 domain:partezencamargue.com
 domain:partitodemocraticobat.it
 domain:partner-food.com
@@ -6604,7 +6643,7 @@ domain:q-site.eu
 domain:q.aeoncash.org
 domain:q.bamto.org
 domain:q12z.net
-domain:q3.aeon888link.org
+domain:q3.alien203.org
 domain:q3mart.in
 domain:q95294fs.beget.tech
 domain:qazzhol.com
@@ -6632,7 +6671,6 @@ domain:quusk02868.workers.dev
 domain:quxzw2zz.bossbeyvipcenter.click
 domain:qvistgaard.dk
 domain:qydape.workers.dev
-domain:qyqotyse.workers.dev
 domain:r.au338.org
 domain:r.bamto.org
 domain:r.findmykids.org
@@ -6694,7 +6732,6 @@ domain:rc.kz
 domain:rccgcol.church
 domain:rccgdlh.org
 domain:rcgraphic.de
-domain:rcguk.com
 domain:rcomlogin.com
 domain:re-nova.es
 domain:re-viv.com
@@ -6857,7 +6894,6 @@ domain:rossitrans.it
 domain:rosso130.it
 domain:rossprotezionecivile.it
 domain:roster.mk
-domain:rot85xe6.yellohotelsharmoni.com
 domain:royalfinance.com.ua
 domain:royalfischer.co.za
 domain:royalfischer.com
@@ -7171,7 +7207,6 @@ domain:sharonrea.com
 domain:sharpelaraby.net
 domain:sharrplast.com
 domain:shawnsalesrd.com
-domain:shebei.sellingate.com
 domain:sheqconsult.co.tz
 domain:shesuccess.com
 domain:shiatsu-altebaeckerei.de
@@ -7241,11 +7276,11 @@ domain:skylinengineering.com
 domain:skylitecleaning.co.uk
 domain:skynet.co.tz
 domain:sl360-7ba65.firebaseio.com
+domain:sla.lovestoblog.com
 domain:slaaplekker.online
 domain:slabandsoul.com
 domain:slot789.us
 domain:slot888maxwin01.space
-domain:slotcore.top
 domain:slotempireworld.com
 domain:sman104jakarta.sch.id
 domain:smansinho.com
@@ -7487,7 +7522,6 @@ domain:studiopsicopedagogico-paola.it
 domain:studioraso.com
 domain:studioscienzemotorie.it
 domain:studiovignali.it
-domain:study.goldenpeak.edu.np
 domain:studyplex.org
 domain:stylab-nuernberg.de
 domain:stylivspaces.com
@@ -7585,6 +7619,7 @@ domain:szentbalazs.hu
 domain:szuag45572.workers.dev
 domain:t-smc.top
 domain:t-t-b.cz
+domain:t.coy9.com
 domain:t64yup0g.bittu.store
 domain:t750k3kz.enfejar.casino
 domain:taatconsulting.com
@@ -7688,7 +7723,6 @@ domain:testmat.pl
 domain:texnodasiki.gr
 domain:textilwerk-menke.de
 domain:tfk7r22klf8vtd8g90jq8qno1tpqhmpe.apps.googleusercontent.com
-domain:tgifk49669.workers.dev
 domain:th.grab.happyice.net
 domain:thaiboxing.in.th
 domain:thaihomeplan.com
@@ -8035,6 +8069,7 @@ domain:v48egot9.bossbey12.click
 domain:v4vw4ytvo4.execute-api.us-east-2.amazonaws.com
 domain:v79.ad
 domain:v79.poker
+domain:v8lvhz7y.lecar.store
 domain:v9157o6o.bossbeybrk.store
 domain:v9zv58t0.slavyera.com
 domain:va9ucaqk.bossbey13.click
@@ -8192,6 +8227,7 @@ domain:vwb3.ru
 domain:vwwadvocaten.nl
 domain:vxj8vrpc.bossbeylux.click
 domain:vys.me
+domain:w.bosmj.org
 domain:w3psy.org
 domain:wadosefa.workers.dev
 domain:wagerwealth.id
@@ -8520,6 +8556,7 @@ domain:www.fenal.it
 domain:www.ferrarahockey.it
 domain:www.festadiborgorovereto.it
 domain:www.fioreriadaalberto.it
+domain:www.firedoormaintenance.com.au
 domain:www.fisioterapiacioni.it
 domain:www.fiveroomsortigia.it
 domain:www.flexispy.com
@@ -8662,7 +8699,6 @@ domain:www.manganrealestate.com
 domain:www.mannellagroup.it
 domain:www.mariaelenaferraresi.it
 domain:www.maribodaek.dk
-domain:www.markcode.my
 domain:www.matalnatura.com
 domain:www.mauroleo.com
 domain:www.maximasan.com
@@ -8689,7 +8725,6 @@ domain:www.mobilestealthreview.com
 domain:www.mobiletool.ru
 domain:www.mobistealth.com
 domain:www.modecoenergie.be
-domain:www.mojomama.org
 domain:www.moonlightweddingservices.co.uk
 domain:www.morningsidechurchofchrist.org.nz
 domain:www.mountpharma.com
@@ -8717,14 +8752,11 @@ domain:www.najokamih.sk
 domain:www.napolicult.com
 domain:www.nasechataulesa.cz
 domain:www.nathalielippens.be
-domain:www.negociosliterarios.com.tacetbooks.com
 domain:www.netspy.net
 domain:www.new-age-bookstore.amanamission.com
 domain:www.newdnsglobaldnsduckdns.com
 domain:www.newgemtsa63.fr
-domain:www.newratu.com
 domain:www.nextge.fr
-domain:www.nickbrownart.net
 domain:www.nmmalerfirma.dk
 domain:www.nondisughero.it
 domain:www.nonnafilomena.it
@@ -8743,7 +8775,6 @@ domain:www.omniaedilizia.com
 domain:www.online-ernaehrungsberatung.com
 domain:www.onlinecasinodeck.com
 domain:www.orangemoon.it
-domain:www.organicsplususa.com
 domain:www.orlandochurchplant.com
 domain:www.osamaphplogistices.com
 domain:www.osamaphplogisticesbackup.com
@@ -8752,7 +8783,6 @@ domain:www.osamaphplogisticesbackup2.com
 domain:www.oscarmartinez4sheriff.com
 domain:www.otticaimperatore.it
 domain:www.oywasacco.com
-domain:www.pacanaturals.com
 domain:www.palerospropertymanagement.com
 domain:www.palmvalehomes.com
 domain:www.panificiopallaria.it
@@ -8849,7 +8879,6 @@ domain:www.sevencolours.ro
 domain:www.shadow-logs.com
 domain:www.shadow-spy.com
 domain:www.shadyspy.com
-domain:www.shanecrossweb.com
 domain:www.sharrplast.com
 domain:www.shenconstruction.com
 domain:www.sicilypantelleriapropertyforsale.com
@@ -8985,14 +9014,12 @@ domain:www.webstorebusiness.it
 domain:www.webwatcher.com
 domain:www.webwatchernow.com
 domain:www.weight-loss-center.net
-domain:www.wesolerobaczki.pl
 domain:www.wheelerconstruct.com
 domain:www.whereisfrancis.com
 domain:www.wheresmydroid.com
 domain:www.winconceptdesign.com
 domain:www.wisemo.com
 domain:www.wrongdoneright.com
-domain:www.wtthru.co.th
 domain:www.xn--90abz0a.xn--p1ai
 domain:www.xn--webdesign-nrnberg-d3b.net
 domain:www.xvids.us
@@ -9021,6 +9048,7 @@ domain:xaluziki.workers.dev
 domain:xanthron.com
 domain:xaydunghoangdannguyen.com
 domain:xaydungnissi.com
+domain:xbxza50287.workers.dev
 domain:xckhk0cbdt.workers.dev
 domain:xculpture.com
 domain:xdevelopers.in
@@ -9085,7 +9113,6 @@ domain:xs88.art
 domain:xs88.club
 domain:xsevbeauty.de
 domain:xtreamonline.net
-domain:xuun.net
 domain:xv5.aksara87.org
 domain:xvideosxxx.me
 domain:xvids.us
@@ -9121,7 +9148,6 @@ domain:yoururges.com
 domain:yourveganjourney.com
 domain:youtogs.com
 domain:yozh-service.com.ua
-domain:yqqsi15906.workers.dev
 domain:yrayg0ro.sleavepiker.com
 domain:ytelva.com
 domain:ytheyemenicoffeeco.co.uk
